@@ -1,0 +1,35 @@
+[  {    "Question": "Which of the below Tabular Editor 3 licenses let you connect to a dataset in Power BI Premium Capacity?",    "PossibleAnswers": ["Business", "Desktop", "Enterprise", "Premium"],
+    "Context": "An Enterprise license is required to connect to a remote dataset in Premium Capacity.",
+    "Answer": "Enterprise",
+    "Link": "https://docs.tabulareditor.com/te3/editions.html",
+    "QuestionType": "Multiple Choice",
+    "Points": 10
+  },
+  {
+    "Question": "Which of the below statements about Tabular Editor 3 is true?",
+    "PossibleAnswers": ["You need an internet connection to use Tabular Editor", "You cannot connect to Direct Query models with Tabular Editor", "Tabular Editor can open .bim, database.json, .pbit and .pbix files", "From Tabular Editor you can query the model with both DAX Queries and MDX (via the Pivot Grid)"],
+    "Context": "Tabular Editor doesn't require an internet connection, can connect to Direct Query models and cannot open .pbix files.\nYou can query the model with both DAX and MDX.",
+    "Answer": "From Tabular Editor you can query the model with both DAX Queries and MDX (via the Pivot Grid)",
+    "Link": "https://docs.tabulareditor.com/te3/getting-started.html",
+    "QuestionType": "Multiple Choice",
+    "Points": 10
+  },
+  {
+    "Question": "What is the easiest way to format all DAX in your Power BI model with Tabular Editor?",
+    "PossibleAnswers": ["Format all DAX with a C# Script", "Right-click the model and select 'Script DAX', then press 'Format DAX' button", "Use the 'Debug Commas' formatting option", "Use Tabular Editor to send the model metadata to DaxFormatter.com"],
+    "Context": "DAX Scripts let you edit multiple DAX objects at once. This lets you format all DAX in one, clean sweep.",
+    "Answer": "Right-click the model and select 'Script DAX', then press 'Format DAX' button",
+    "Link": "https://docs.tabulareditor.com/te3/features/dax-scripts.html",
+    "QuestionType": "Multiple Choice",
+    "Points": 10
+  },
+  {
+    "Question": "How can you edit a DAX expression and Format String at the same time in Tabular Editor?",
+    "PossibleAnswers": ["You can only do this with a custom C# Script", "Using the DAX Script feature (right-click the DAX Object)", "Dragging the 'Properties' window into the 'Expression Editor'", "In the Expression Editor window, selecting the 'Format String' from the dropdown menu in the top-left" ],
+    "Context": "DAX Scripts let you edit multiple properties of the DAX object at once.",
+    "Answer": "Using the DAX Script feature (right-click the DAX Object)",
+    "Link": "https://docs.tabulareditor.com/te3/features/dax-scripts.html",
+    "QuestionType": "Multiple Choice",
+    "Points": 10
+  }
+]
