@@ -1,35 +1,151 @@
-[  {    "Question": "Which of the below Tabular Editor 3 licenses let you connect to a dataset in Power BI Premium Capacity?",    "PossibleAnswers": ["Business", "Desktop", "Enterprise", "Premium"],
+[  {    
+    "Question": "With a _______ Tabular Editor 3 license, you can connect to a remote dataset in Power BI Premium Capacity",    
+    "PossibleAnswers": ["Business", "Desktop", "Enterprise", "Premium"],
     "Context": "An Enterprise license is required to connect to a remote dataset in Premium Capacity.",
     "Answer": "Enterprise",
     "Link": "https://docs.tabulareditor.com/te3/editions.html",
     "QuestionType": "Multiple Choice",
-    "Points": 10
+    "Points": 2,
+    "Difficulty": 1
   },
-  {
-    "Question": "Which of the below statements about Tabular Editor 3 is true?",
-    "PossibleAnswers": ["You need an internet connection to use Tabular Editor", "You cannot connect to Direct Query models with Tabular Editor", "Tabular Editor can open .bim, database.json, .pbit and .pbix files", "From Tabular Editor you can query the model with both DAX Queries and MDX (via the Pivot Grid)"],
-    "Context": "Tabular Editor doesn't require an internet connection, can connect to Direct Query models and cannot open .pbix files.\nYou can query the model with both DAX and MDX.",
-    "Answer": "From Tabular Editor you can query the model with both DAX Queries and MDX (via the Pivot Grid)",
-    "Link": "https://docs.tabulareditor.com/te3/getting-started.html",
+  {    
+    "Question": "With a _______ Tabular Editor 3 license, you can connect to a remote dataset in Power BI Premium Per User",    
+    "PossibleAnswers": ["Business", "Desktop", "MIT", "Premium"],
+    "Context": "An Enterprise license is required to connect to a remote dataset in Premium Capacity.",
+    "Answer": "Enterprise",
+    "Link": "https://docs.tabulareditor.com/te3/editions.html",
     "QuestionType": "Multiple Choice",
-    "Points": 10
+    "Points": 2,
+    "Difficulty": 1
   },
   {
-    "Question": "What is the easiest way to format all DAX in your Power BI model with Tabular Editor?",
-    "PossibleAnswers": ["Format all DAX with a C# Script", "Right-click the model and select 'Script DAX', then press 'Format DAX' button", "Use the 'Debug Commas' formatting option", "Use Tabular Editor to send the model metadata to DaxFormatter.com"],
+    "Question": "Tabular Editor 3 cannot open _____ file types.",
+    "PossibleAnswers": [".dax", ".csx", ".pbix", ".pbit"],
+    "Context": "While Tabular Editor can open .pbit files (as they contain metadata information), it is not supported. Tabular Editor cannot open .pbix files.",
+    "Answer": ".pbix",
+    "Link": "https://docs.tabulareditor.com/te3/desktop-limitations.html#power-bi-file-types",
+    "QuestionType": "Multiple Choice",
+    "Points": 2,
+    "Difficulty": 1
+  },
+  {
+    "Question": "What operating system does Tabular Editor run on?",
+    "PossibleAnswers": ["Windows", "Mac OSX", "iOS", "Android"],
+    "Context": "Tabular Editor is a Windows application.",
+    "Answer": "Windows",
+    "Link": "https://docs.tabulareditor.com/te3/getting-started.html#system-requirements",
+    "QuestionType": "Multiple Choice",
+    "Points": 2,
+    "Difficulty": 1
+  },
+  {
+    "Question": "True or False: To use Tabular Editor for Tabular Modeling, you need an internet connection.",
+    "PossibleAnswers": ["True - You need it to edit Data Models in Power BI Service", "False - Tabular Editor only connects to Power BI Desktop as an External Tool", "False - Tabular Editor is an Offline Tool", "True - Tabular Editor needs it to format DAX."],
+    "Context": "Tabular Editor can edit remote data models, but doesn't need to. You can work entirely offline, connected to model metadata or a local Power BI Desktop model.",
+    "Answer": "False - Tabular Editor is an Offline Tool",
+    "Link": "https://docs.tabulareditor.com/te3/features/security-privacy.html",
+    "QuestionType": "Multiple Choice",
+    "Points": 2,
+    "Difficulty": 1
+  },
+  {
+    "Question": "Which of the following data modeling features are possible to configure in Tabular Editor but not Power BI Desktop?",
+    "PossibleAnswers": ["Object-Level Security", "Translations", "Perspectives", "Calculation Groups"],
+    "Context": "Some features do not have a user interface in Power BI Desktop, but are supported modeling operations. All of these are examples of powerful data modeling features which cannot be configured from Power BI Desktop.",
+    "Answer": "All of the Above",
+    "Link": " ",
+    "QuestionType": "Multiple Choice",
+    "Points": 2,
+    "Difficulty": 1
+  },
+  {
+    "Question": "To benefit most from 'Personalize Visuals' in Power BI, you need to configure ______ in Tabular Editor, because it cannot be configured from Power BI Desktop.",
+    "PossibleAnswers": ["Personalization", "Dynamic Visuals", "Perspectives", "`Field Parameters"],
+    "Context": "Adding fields to perspectives and then enabling 'Personalize Visuals' limits the fields exposed to end-users. Creating tailored perspectives for specific report pages can be very valuable.",
+    "Answer": "Perspectives",
+    "Link": " ",
+    "QuestionType": "Multiple Choice",
+    "Points": 2,
+    "Difficulty": 1
+  },
+  {
+    "Question": "True or False: Tabular Editor is intended for only enterprise Tabular Model developers.",
+    "PossibleAnswers": ["True: Tabular Editor is too complex for Analysts.", "True: Tabular Editor is meant for Enterprise model development.", "False: Tabular Editor can also be helpful for Analysts and Support engineers to analyze models.", "False: Tabular Editor can be used also to all dataset types."],
+    "Context": "Tabular Editor can bring value to all personas creating datasets and Tabular Models. It helps you make better models, faster.",
+    "Answer": "False: Tabular Editor can also be helpful for Analysts and Support engineers to analyze models.",
+    "Link": " ",
+    "QuestionType": "Multiple Choice",
+    "Points": 2,
+    "Difficulty": 1
+  },
+  {
+    "Question": "Can you add new Excel data sources stored in SharePoint with Tabular Editor?",
+    "PossibleAnswers": ["Yes, you can add them by creating data tables and new M Partitions, then specifying the M code for the data connection and transformation.", "No, SharePoint is not a supported data source.", "Yes, you can use the 'Import Data Tables' to add it.", "No, you cannot add new data sources with Tabular Editor, only modify DAX code."],
+    "Context": "You can add any data source supported by the service. Supported sources by Tabular Editor are merely easier as the user interface will generate the M code for you, or add the explict source to the model.",
+    "Answer": "Yes, you can add them by creating data tables and new M Partitions, then specifying the M code for the data connection and transformation.",
+    "Link": "https://docs.tabulareditor.com/te3/tutorials/importing-tables.html",
+    "QuestionType": "Multiple Choice",
+    "Points": 5,
+    "Difficulty": 2
+  },
+  {
+    "Question": "Which of the below features are not in Tabular Editor",
+    "PossibleAnswers": ["Preview data tables to view transactional data", "Batch rename children to rename many model objects at once", "DAX Debugger to break up complex DAX evaluations and navigate through each step", "DAX Queries to query the model and show how long the query took to evaluate."],
+    "Context": "All of the above are features of Tabular Editor. You can not only use it to help you write better DAX, but also add or manage data sources and Power Query, create/change relationships, test / validate the model, and perform complex automations, among other things.",
+    "Answer": "None of the Above",
+    "Link": "https://docs.tabulareditor.com/te3/tutorials/importing-tables.html",
+    "QuestionType": "Multiple Choice",
+    "Points": 5,
+    "Difficulty": 2
+  },
+  {
+    "Question": "In Tabular Editor, you can test RLS using ______",
+    "PossibleAnswers": ["Impersonation + DAX Queries", "Impersonation + C# Scripts", "Pivot Grids without Impersonation", "The 'Preview Security' feature"],
+    "Context": "Impersonation lets you run a query and view it as a user who has Build permissions, access to the dataset, and has been assigned to a security role. This works with DAX Queries, Pivot Grids and Preview Data.",
+    "Answer": "Impersonation + DAX Queries",
+    "Link": "https://docs.tabulareditor.com/te3/",
+    "QuestionType": "Multiple Choice",
+    "Points": 5,
+    "Difficulty": 2
+  },
+  {
+    "Question": "What is the easiest way to view the Power Query of an Incremental Refresh table from Tabular Editor?",
+    "PossibleAnswers": ["When selecting the Table, in the 'Properties' pane, under 'Source Expression'", "When selecting the Table, in the 'Properties' pane, under 'Polling Expression'", "When selecting the Table, in the 'Expression Editor' pane, in the top-left, click on the Drop-Down that says 'Default Detail-Rows Expression' and select 'Source Expression'", "When selecting the M Expression, look at the 'Expression Editor' pane to see the M code."],
+    "Context": "The 'Source Expression' is the main 'Power Query' for the Incremental Refresh table. It can be viewed from the 'Properties' pane, but it is better to view it in the 'Expression Editor'.",
+    "Answer": "When selecting the M Expression, look at the 'Expression Editor' pane to see the M code.",
+    "Link": "https://docs.tabulareditor.com/te3/",
+    "QuestionType": "Multiple Choice",
+    "Points": 5,
+    "Difficulty": 2
+  },
+  {
+    "Question": "When you edit the Power Query of a table to add or remove columns, what is the easiest way to modify the schema of the model table to add these columns?",
+    "PossibleAnswers": ["Right-click the table and select 'Update Table Schema...'", "Add the data columns to the table and update their 'Source Column' property", "Delete and re-add the table", "Duplicate an existing column and change the 'Lineage Tag' property"],
+    "Context": "The 'Update Table Schema' property will automatically update the schema, adding or removing any columns. This can be done manually, by deleting the columns or manually adding them and updating the 'Source Column' property. The 'Lineage Tag' must always be unique; Tabular Editor already ensures this is the case behind-the-scenes, so you don't have to modify it, yourself.",
+    "Answer": "When selecting the M Expression, look at the 'Expression Editor' pane to see the M code.",
+    "Link": "https://docs.tabulareditor.com/te3/",
+    "QuestionType": "Multiple Choice",
+    "Points": 5,
+    "Difficulty": 2
+  },
+  {
+    "Question": "The easiest way to format ALL DAX in a model is with ______",
+    "PossibleAnswers": ["DAX Scripting", "C# Scripting", "Batch rename children", "Debug Commas"],
     "Context": "DAX Scripts let you edit multiple DAX objects at once. This lets you format all DAX in one, clean sweep.",
-    "Answer": "Right-click the model and select 'Script DAX', then press 'Format DAX' button",
+    "Answer": "DAX Scripting",
     "Link": "https://docs.tabulareditor.com/te3/features/dax-scripts.html",
     "QuestionType": "Multiple Choice",
-    "Points": 10
+    "Points": 5,
+    "Difficulty": 2
   },
   {
-    "Question": "How can you edit a DAX expression and Format String at the same time in Tabular Editor?",
-    "PossibleAnswers": ["You can only do this with a custom C# Script", "Using the DAX Script feature (right-click the DAX Object)", "Dragging the 'Properties' window into the 'Expression Editor'", "In the Expression Editor window, selecting the 'Format String' from the dropdown menu in the top-left" ],
+    "Question": "You can edit a DAX expression and Format String at the same time in Tabular Editor using ______",
+    "PossibleAnswers": ["DAX Scripting", "C# Scripting", "Batch rename children", "Calculation Groups"],
     "Context": "DAX Scripts let you edit multiple properties of the DAX object at once.",
-    "Answer": "Using the DAX Script feature (right-click the DAX Object)",
+    "Answer": "DAX Scripting",
     "Link": "https://docs.tabulareditor.com/te3/features/dax-scripts.html",
     "QuestionType": "Multiple Choice",
-    "Points": 10
+    "Points": 5,
+    "Difficulty": 2
   }
 ]
