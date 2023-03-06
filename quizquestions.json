@@ -1,12 +1,12 @@
-[  {    
+[  
+  {    
     "Question": "With a _______ Tabular Editor 3 license, you can connect to a remote dataset in Power BI Premium Capacity",    
     "PossibleAnswers": ["Business", "Desktop", "Enterprise", "Premium"],
     "Context": "An Enterprise license is required to connect to a remote dataset in Premium Capacity.",
     "Answer": "Enterprise",
     "Link": "https://docs.tabulareditor.com/te3/editions.html",
     "QuestionType": "Multiple Choice",
-    "Points": 2,
-    "Difficulty": 1
+    "Points": 2
   },
   {    
     "Question": "With a _______ Tabular Editor 3 license, you can connect to a remote dataset in Power BI Premium Per User",    
@@ -15,8 +15,7 @@
     "Answer": "Enterprise",
     "Link": "https://docs.tabulareditor.com/te3/editions.html",
     "QuestionType": "Multiple Choice",
-    "Points": 2,
-    "Difficulty": 1
+    "Points": 2
   },
   {
     "Question": "Tabular Editor 3 cannot open _____ file types.",
@@ -25,8 +24,7 @@
     "Answer": ".pbix",
     "Link": "https://docs.tabulareditor.com/te3/desktop-limitations.html#power-bi-file-types",
     "QuestionType": "Multiple Choice",
-    "Points": 2,
-    "Difficulty": 1
+    "Points": 2
   },
   {
     "Question": "What operating system does Tabular Editor run on?",
@@ -35,8 +33,7 @@
     "Answer": "Windows",
     "Link": "https://docs.tabulareditor.com/te3/getting-started.html#system-requirements",
     "QuestionType": "Multiple Choice",
-    "Points": 2,
-    "Difficulty": 1
+    "Points": 2
   },
   {
     "Question": "True or False: To use Tabular Editor for Tabular Modeling, you need an internet connection.",
@@ -45,8 +42,7 @@
     "Answer": "False - Tabular Editor is an Offline Tool",
     "Link": "https://docs.tabulareditor.com/te3/features/security-privacy.html",
     "QuestionType": "Multiple Choice",
-    "Points": 2,
-    "Difficulty": 1
+    "Points": 2
   },
   {
     "Question": "Which of the following data modeling features are possible to configure in Tabular Editor but not Power BI Desktop?",
@@ -55,8 +51,7 @@
     "Answer": "All of the Above",
     "Link": " ",
     "QuestionType": "Multiple Choice",
-    "Points": 2,
-    "Difficulty": 1
+    "Points": 2
   },
   {
     "Question": "To benefit most from 'Personalize Visuals' in Power BI, you need to configure ______ in Tabular Editor, because it cannot be configured from Power BI Desktop.",
@@ -65,8 +60,7 @@
     "Answer": "Perspectives",
     "Link": " ",
     "QuestionType": "Multiple Choice",
-    "Points": 2,
-    "Difficulty": 1
+    "Points": 2
   },
   {
     "Question": "True or False: Tabular Editor is intended for only enterprise Tabular Model developers.",
@@ -75,8 +69,7 @@
     "Answer": "False: Tabular Editor can also be helpful for Analysts and Support engineers to analyze models.",
     "Link": " ",
     "QuestionType": "Multiple Choice",
-    "Points": 2,
-    "Difficulty": 1
+    "Points": 2
   },
   {
     "Question": "Can you add new Excel data sources stored in SharePoint with Tabular Editor?",
@@ -85,8 +78,7 @@
     "Answer": "Yes, you can add them by creating data tables and new M Partitions, then specifying the M code for the data connection and transformation.",
     "Link": "https://docs.tabulareditor.com/te3/tutorials/importing-tables.html",
     "QuestionType": "Multiple Choice",
-    "Points": 5,
-    "Difficulty": 2
+    "Points": 5
   },
   {
     "Question": "Which of the below features are not in Tabular Editor",
@@ -95,57 +87,261 @@
     "Answer": "None of the Above",
     "Link": "https://docs.tabulareditor.com/te3/tutorials/importing-tables.html",
     "QuestionType": "Multiple Choice",
-    "Points": 5,
-    "Difficulty": 2
+    "Points": 5
   },
   {
     "Question": "In Tabular Editor, you can test RLS using ______",
-    "PossibleAnswers": ["Impersonation + DAX Queries", "Impersonation + C# Scripts", "Pivot Grids without Impersonation", "The 'Preview Security' feature"],
+    "PossibleAnswers": 
+      [
+        "Impersonation + DAX Queries", 
+        "Impersonation + C# Scripts", 
+        "Pivot Grids without Impersonation", 
+        "The 'Preview Security' feature"
+      ],
     "Context": "Impersonation lets you run a query and view it as a user who has Build permissions, access to the dataset, and has been assigned to a security role. This works with DAX Queries, Pivot Grids and Preview Data.",
     "Answer": "Impersonation + DAX Queries",
     "Link": "https://docs.tabulareditor.com/te3/",
     "QuestionType": "Multiple Choice",
-    "Points": 5,
-    "Difficulty": 2
+    "Points": 5
   },
   {
     "Question": "What is the easiest way to view the Power Query of an Incremental Refresh table from Tabular Editor?",
-    "PossibleAnswers": ["When selecting the Table, in the 'Properties' pane, under 'Source Expression'", "When selecting the Table, in the 'Properties' pane, under 'Polling Expression'", "When selecting the Table, in the 'Expression Editor' pane, in the top-left, click on the Drop-Down that says 'Default Detail-Rows Expression' and select 'Source Expression'", "When selecting the M Expression, look at the 'Expression Editor' pane to see the M code."],
+    "PossibleAnswers": 
+      [
+        "When selecting the Table, in the 'Properties' pane, under 'Source Expression'", 
+        "When selecting the Table, in the 'Properties' pane, under 'Polling Expression'", 
+        "When selecting the Table, in the 'Expression Editor' pane, in the top-left, click on the Drop-Down that says 'Default Detail-Rows Expression' and select 'Source Expression'", 
+        "When selecting the M Expression, look at the 'Expression Editor' pane to see the M code."
+      ],
     "Context": "The 'Source Expression' is the main 'Power Query' for the Incremental Refresh table. It can be viewed from the 'Properties' pane, but it is better to view it in the 'Expression Editor'.",
     "Answer": "When selecting the M Expression, look at the 'Expression Editor' pane to see the M code.",
     "Link": "https://docs.tabulareditor.com/te3/",
     "QuestionType": "Multiple Choice",
-    "Points": 5,
-    "Difficulty": 2
+    "Points": 5
   },
   {
     "Question": "When you edit the Power Query of a table to add or remove columns, what is the easiest way to modify the schema of the model table to add these columns?",
-    "PossibleAnswers": ["Right-click the table and select 'Update Table Schema...'", "Add the data columns to the table and update their 'Source Column' property", "Delete and re-add the table", "Duplicate an existing column and change the 'Lineage Tag' property"],
+    "PossibleAnswers": 
+      [
+        "Right-click the table and select 'Update Table Schema...'", 
+        "Add the data columns to the table and update their 'Source Column' property", 
+        "Delete and re-add the table", 
+        "Duplicate an existing column and change the 'Lineage Tag' property"
+      ],
     "Context": "The 'Update Table Schema' property will automatically update the schema, adding or removing any columns. This can be done manually, by deleting the columns or manually adding them and updating the 'Source Column' property. The 'Lineage Tag' must always be unique; Tabular Editor already ensures this is the case behind-the-scenes, so you don't have to modify it, yourself.",
     "Answer": "When selecting the M Expression, look at the 'Expression Editor' pane to see the M code.",
     "Link": "https://docs.tabulareditor.com/te3/",
     "QuestionType": "Multiple Choice",
-    "Points": 5,
-    "Difficulty": 2
+    "Points": 5
   },
   {
     "Question": "The easiest way to format ALL DAX in a model is with ______",
-    "PossibleAnswers": ["DAX Scripting", "C# Scripting", "Batch rename children", "Debug Commas"],
+    "PossibleAnswers": 
+      [
+        "DAX Scripting", 
+        "C# Scripting", 
+        "Batch rename children", 
+        "Debug Commas"
+      ],
     "Context": "DAX Scripts let you edit multiple DAX objects at once. This lets you format all DAX in one, clean sweep.",
     "Answer": "DAX Scripting",
     "Link": "https://docs.tabulareditor.com/te3/features/dax-scripts.html",
     "QuestionType": "Multiple Choice",
-    "Points": 5,
-    "Difficulty": 2
+    "Points": 5
   },
   {
     "Question": "You can edit a DAX expression and Format String at the same time in Tabular Editor using ______",
-    "PossibleAnswers": ["DAX Scripting", "C# Scripting", "Batch rename children", "Calculation Groups"],
+    "PossibleAnswers": 
+      [
+        "DAX Scripting", 
+        "C# Scripting", 
+        "Batch rename children", 
+        "Calculation Groups"
+      ],
     "Context": "DAX Scripts let you edit multiple properties of the DAX object at once.",
     "Answer": "DAX Scripting",
     "Link": "https://docs.tabulareditor.com/te3/features/dax-scripts.html",
     "QuestionType": "Multiple Choice",
-    "Points": 5,
-    "Difficulty": 2
+    "Points": 5
+  },
+  {
+    "Question": "When making a new measure that references other measures, what is the fastest way to check their DAX expressions?",
+    "PossibleAnswers": 
+      [
+        "Go to Definition", 
+        "Peek Definition", 
+        "Select the Measures from the TOM Explorer", 
+        "Query the measures with a DAX Query"
+      ],
+    "Context": "If you right-click a measure reference and select 'Peek Definition', a mini-window opens beneath the reference showing the DAX definition.",
+    "Answer": "Peek Definition",
+    "Link": "https://data-goblins.com/power-bi/learning-tabular-editor-part-1-beginner/#code-assist=:~:text=Peek%20Definition%20(Alt%20%2B%20F12)%3A",
+    "QuestionType": "Multiple Choice",
+    "Points": 2
+  },
+  {
+    "Question": "True or False: When checking the definition of a measure with 'Peek Definition', you can change the DAX in the mini-window.",
+    "PossibleAnswers": 
+      [
+        "True: This is an easy way to change the DAX of a measure reference.", 
+        "True: But you can only change CALCULATE filter statements.", 
+        "False: 'Peek Definition' cannot be used for checking measures, only Tables.", 
+        "False: 'Peek Definition' only shows the DAX definition; to change it, you should use 'Go to Definition'."
+      ],
+    "Context": "'Peek Definition' lets you check the DAX definition in a mini-window, but you can't edit the DAX in this window.",
+    "Answer": "False: 'Peek Definition' only shows the DAX definition; to change it, you should use 'Go to Definition'.",
+    "Link": "https://data-goblins.com/power-bi/learning-tabular-editor-part-1-beginner/#code-assist=:~:text=Peek%20Definition%20(Alt%20%2B%20F12)%3A",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
+  },
+  {
+    "Question": "You wrote some complex DAX code with a lot of variables. You decide that some of the variable names are too long, and you want to make them more concise; however, the variables are referenced in many places. What code-assist feature of Tabular Editor 3 will help, here?",
+    "PossibleAnswers": 
+      [
+        "Refactor (Ctrl + R)", 
+        "Select Multiple (Ctrl + D)", 
+        "Select All Instances (Ctrl + Alt + D)", 
+        "Find & Replace (Ctrl + F)"
+      ],
+    "Context": "Refactor (configured by default as CTRL + R) is the fastest way to change all instances of in-line definitions. Select All / Select Multiple can be configured from 'Tools > Preferences > Keyboard...'",
+    "Answer": "Refactor (Ctrl + R)",
+    "Link": "https://data-goblins.com/power-bi/learning-tabular-editor-part-1-beginner/#code-assist=:~:text=Refactor%20(CTRL%20%2B%20R)%3A",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
+  },
+  {
+    "Question": "You are checking many objects in a big model, like measures, calculation items and calculated tables / columns. What navigation feature can make it easier for you to navigate back & forward across previously selected objects?",
+    "PossibleAnswers": 
+      [
+        "Back (Alt + Left) and Foreward (Alt + Right)", 
+        "TOM Explorer Search", 
+        "Find in Model (Ctrl + F)", 
+        "Go to Definition"
+      ],
+    "Context": "Pressing 'Back' (Alt + Left) in the expression editor will automatically take you to the previously selected object. Once you've gone back, you can press 'Foreward' (Alt + Right) to go foreward. When clicking through many objects, this can save a lot of time.",
+    "Answer": "Back (Alt + Left) and Foreward (Alt + Right)",
+    "Link": "https://docs.tabulareditor.com/te3/",
+    "QuestionType": "Multiple Choice",
+    "Points": 2
+  },
+  {
+    "Question": "You are writing some complex DAX. Right now, you are writing the DAX in Tabular Editor, then saving your changes and testing it in Power BI Desktop. What feature in Tabular Editor can make this faster and easier?",
+    "PossibleAnswers": 
+      [
+        "Use a DAX Query to test the measure, which you write with 'Define Measure' in the query scope.", 
+        "A C# Script, to write and test the measure, automatically.", 
+        "Script DAX, to write and test the measure, automatically.", 
+        "You can use 'Format DAX' which will make the DAX easier to read and debug, later."
+      ],
+    "Context": "Developing DAX from a query window and iterating the expression using 'Define Measure' is the preferred way of developing complex DAX code. This restricts development and testing to a single window, and you don't need to write changes to the model to test changes to the DAX; it happens within the query scope, only. Once you're ready, you can write the changes.",
+    "Answer": "Use a DAX Query to test the measure, which you write with 'Define Measure' in the query scope.",
+    "Link": "https://docs.tabulareditor.com/te3/",
+    "QuestionType": "Multiple Choice",
+    "Points": 10
+  },
+  {
+    "Question": "You are investigating a model that is experiencing performance issues. What tool in Tabular Editor should you use, first, to address the problem efficiently?",
+    "PossibleAnswers": 
+      [
+        "'Refresh Table' to test the table refresh speed.", 
+        "'VertiPaq Analyzer' to see which columns in the model are taking up the most space.", 
+        "'Diagram View' to see the tables and relationships.", 
+        "'DAX Debugger' to debug the DAX of the measures one-by-one."
+      ],
+    "Context": "Running the VertiPaq Analyzer will give you statistics about your model, illustrating tables/columns that are atypically large, and relationships with referential integrity issues.",
+    "Answer": "'VertiPaq Analyzer' to see which columns in the model are taking up the most space.",
+    "Link": "https://data-goblins.com/power-bi/analyze-power-bi-dataset",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
+  },
+  {
+    "Question": "You have implemented Incremental Refresh in a Power BI Dataset deployed to Premium Capacity. How can you most efficiently validate the refresh policy from Tabular Editor?",
+    "PossibleAnswers": 
+      [
+        "Run the 'VertiPaq Analyzer' and check the 'Partitions' window to see what partitions are there and how much data they hold.", 
+        "In the 'TOM Explorer', check the 'Refresh Policy' partitions that were made in the 'Partitions' objects beneath the table.", 
+        "In a DAX Query window, query the table.", 
+        "Right-click the table and select 'Preview Data'."
+      ],
+    "Context": "The 'VertiPaq Analyzer' will tell you (1) that the partitions were created and (2) that they contain data.",
+    "Answer": "Run the 'VertiPaq Analyzer' and check the 'Partitions' window to see what partitions are there and how much data they hold.",
+    "Link": "https://data-goblins.com/power-bi/analyze-power-bi-dataset",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
+  },
+  {
+    "Question": "You can create custom ______ to display different windows for different use-cases, like Development vs. Optimization.",
+    "PossibleAnswers": 
+      [
+        "Layouts", 
+        "Windows", 
+        "DAX Queries", 
+        "C# Scripts"
+      ],
+    "Context": "Creating custom layouts is useful to have different displays depending on what you are doing. It is recommended to set up different layouts for different use-cases.",
+    "Answer": "Layouts",
+    "Link": "https://data-goblins.com/power-bi/learning-tabular-editor-part-1-beginner/#customize",
+    "QuestionType": "Multiple Choice",
+    "Points": 2
+  },
+  {
+    "Question": "There is a problem with a custom M Function in your data model. You implemented the transformation in the upstream data source, instead. How can you find all of the M Partitions that referenced this function, and what step in the M code, so you can change the Power Query?",
+    "PossibleAnswers": 
+      [
+        "'View Dependencies' on the custom function", 
+        "'Find' and search the name of the function in the entire model", 
+        "Use a C# Script that uses Selected.Function while selecting the custom M Function", 
+        "'View Dependencies' on the shared expression"
+      ],
+    "Context": "'View Dependencies' only works with DAX. To find Power Query dependencies, use 'Find' to search the entire model. Searching the reference of the custom function will reveal which partitions reference it, and where exactly in the code the reference occurs.",
+    "Answer": "'Find' and search the name of the function in the entire model",
+    "Link": "https://data-goblins.com/power-bi/learning-tabular-editor-part-1-beginner/#code-assist=:~:text=Find%20%26%20Replace%20in%20Tabular%20Editor%203",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
+  },
+  {
+    "Question": "You are trying to debug a complex DAX expression with many variables, nested table expressions and CALCULATE functions. How can the DAX Debugger in Tabular Editor help?",
+    "PossibleAnswers": 
+      [
+        "You can navigate through a 'Call Tree' of each step in the evaluation and see the variable values & filter context.", 
+        "You can break down the DAX code into steps automatically and navigate through each one to find the problem.", 
+        "You can manipulate the filter context, to see how the variables and evaluations change", 
+        "You can navigate through the row context iterations to see how the variables and evaluations change."
+      ],
+    "Context": "The 'DAX Debugger' is a powerful tool for investigating DAX code. It automatically breaks down the evaluation into pieces and lets you investigate them step-by-step.",
+    "Answer": "All of the Above",
+    "Link": "https://www.sqlbi.com/articles/debugging-dax-measures-in-power-bi/",
+    "QuestionType": "Multiple Choice",
+    "Points": 10
+  },
+  {
+    "Question": "How can you start the 'DAX Debugger' in Tabular Editor?",
+    "PossibleAnswers": 
+      [
+        "Right-click a cell on the pivot grid and select 'Debug this Value'.", 
+        "Right-click a cell in a DAX Query using SUMMARIZE and select 'Debug DAX'.", 
+        "Click the 'DAX Debugger' button and add your measure to the pop-up that appears.", 
+        "Right-click a measure in the TOM Explorer and select 'Debug this Measure'"
+      ],
+    "Context": "",
+    "Answer": "",
+    "Link": "https://docs.tabulareditor.com/te3/",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
+  },
+  {
+    "Question": "How can you start the 'DAX Debugger' in Tabular Editor?",
+    "PossibleAnswers": 
+      [
+        "Right-click a cell on the pivot grid and select 'Debug this Value'.", 
+        "Right-click a cell in a DAX Query using SUMMARIZE and select 'Debug DAX'.", 
+        "Click the 'DAX Debugger' button and add your measure to the pop-up that appears.", 
+        "Right-click a measure in the TOM Explorer and select 'Debug this Measure'"
+      ],
+    "Context": "",
+    "Answer": "",
+    "Link": "https://docs.tabulareditor.com/te3/",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
   }
 ]
