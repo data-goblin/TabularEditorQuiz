@@ -176,7 +176,7 @@
       "Duplicate an existing column and change the 'Lineage Tag' property"
     ],
     "Context": "The 'Update Table Schema' property will automatically update the schema, adding or removing any columns. This can be done manually, by deleting the columns or manually adding them and updating the 'Source Column' property. The 'Lineage Tag' must always be unique; Tabular Editor already ensures this is the case behind-the-scenes, so you don't have to modify it, yourself.",
-    "Answer": "When selecting the M Expression, look at the 'Expression Editor' pane to see the M code.",
+    "Answer": "Right-click the table and select 'Update Table Schema...'",
     "Link": "https://docs.tabulareditor.com/te3/",
     "QuestionType": "Multiple Choice",
     "Points": 5
@@ -189,7 +189,7 @@
       "Batch rename children",
       "Debug Commas"
     ],
-    "Context": "DAX Scripts let you edit multiple DAX objects at once. This lets you format all DAX in one, clean sweep.",
+    "Context": "DAX Scripts let you edit multiple DAX objects at once. This lets you format all DAX in one, clean sweep, without writing custom C# code.",
     "Answer": "DAX Scripting",
     "Link": "https://docs.tabulareditor.com/te3/features/dax-scripts.html",
     "QuestionType": "Multiple Choice",
@@ -254,13 +254,13 @@
   {
     "Question": "You are checking many objects in a big model, like measures, calculation items and calculated tables / columns. What navigation feature can make it easier for you to navigate back & forward across previously selected objects?",
     "PossibleAnswers": [
-      "Back (Alt + Left) and Foreward (Alt + Right)",
+      "Back (Alt + Left) and Forward (Alt + Right)",
       "TOM Explorer Search",
       "Find in Model (Ctrl + F)",
       "Go to Definition"
     ],
-    "Context": "Pressing 'Back' (Alt + Left) in the expression editor will automatically take you to the previously selected object. Once you've gone back, you can press 'Foreward' (Alt + Right) to go foreward. When clicking through many objects, this can save a lot of time.",
-    "Answer": "Back (Alt + Left) and Foreward (Alt + Right)",
+    "Context": "Pressing 'Back' (Alt + Left) in the expression editor will automatically take you to the previously selected object. Once you've gone back, you can press 'Forward' (Alt + Right) to go foreward. When clicking through many objects, this can save a lot of time.",
+    "Answer": "Back (Alt + Left) and Forward (Alt + Right)",
     "Link": "https://docs.tabulareditor.com/te3/",
     "QuestionType": "Multiple Choice",
     "Points": 2
@@ -290,6 +290,146 @@
     "Context": "Running the VertiPaq Analyzer will give you statistics about your model, illustrating tables/columns that are atypically large, and relationships with referential integrity issues.",
     "Answer": "'VertiPaq Analyzer' to see which columns in the model are taking up the most space.",
     "Link": "https://data-goblins.com/power-bi/analyze-power-bi-dataset",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
+  },
+  {
+    "Question": "Tabular Editor can save the model as a .bim metadata file or serialized folder structure (database.json). Why is a serialized folder structure helpful?",
+    "PossibleAnswers": [
+      "It splits up each object into their own .json file sorted in folders, making it easier in Source Control to track changes on an object-by-object level.",
+      "It includes analysis from the 'VertiPaq Analyzer' which helps you analyze performance issues.",
+      "It ensures all objects are contained in a single 'database.json' and not separate metadata files, making deployment easier.",
+      "It is human-readable, so you can view it with any text editor or 'diff' changes in Source Control."
+    ],
+    "Context": "The serialized folder structure (database.json) format splits up the model into separate .json files, which is beneficial for source control. It does not contain 'VertiPaq Analyzer' statistics (that is the .vpax format), and both database.json and .bim files are human-readable .json formats.",
+    "Answer": "It splits up each object into their own .json file sorted in folders, making it easier in Source Control to track changes on an object-by-object level.",
+    "Link": "https://data-goblins.com/power-bi/version-control-pt2/#tutorial=",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
+  },
+  {
+    "Question": "You have used Tabular Editor to create two security roles 'RLS' and 'OLS', with permissions set on different objects. In the Power BI Service, you assign both roles to the same person. What is the result?",
+    "PossibleAnswers": [
+      "The 'RLS' role will enforce Table Permissions while the 'OLS' role will enforce Object Permissions for the end-user.",
+      "The 'RLS' role will enforce Table Permissions, but the 'OLS' role will result in an error for the queried object, because RLS and OLS cannot be combined across roles.",
+      "The 'RLS' role will result in an error for the queried object, but the 'OLS' role will enforce Object Permissions for the end-user, because RLS and OLS cannot be combined across roles.",
+      "The end-user will receive an error when attempting to access the model or connected reports, because RLS and OLS cannot be combined across roles."
+    ],
+    "Context": "RLS and OLS cannot be combined across roles, only within roles. When using both RLS and OLS, careful consideration must be taken to ensure a functional model design with the data security strategy.",
+    "Answer": "The end-user will receive an error when attempting to access the model or connected reports, because RLS and OLS cannot be combined across roles.",
+    "Link": "https://docs.tabulareditor.com/te3/tutorials/data-security/data-security-about.html?tabs=nodatasecurity",
+    "QuestionType": "Multiple Choice",
+    "Points": 10
+  },
+  {
+    "Question": "You are managing a data model with Tabular Editor, and receive the requirement to remove Row-Level Security, as it isn't necessary for this particular model. New users must not need to be added to security roles. What do you do?",
+    "PossibleAnswers": [
+      "Refuse the request. RLS is necessary for all data models deployed to Power BI Premium or Premium-Per User workspaces.",
+      "Delete the Table Permissions, so that no filter expressions are applied on the model tables.",
+      "In the 'Properties' pane, set the 'Object-Level Security' to 'Read' for all Tables and Columns, across all Roles.",
+      "Delete all the 'Role' objects and their respective Table Permissions."
+    ],
+    "Context": "So long as at least one Role exists in the model, users must have a Role assigned to be able to view model data, even if there are no Table Permissions. Data Security is often necessary and helpful in data models, but not obligatory.",
+    "Answer": "Delete all the 'Role' objects and their respective Table Permissions.",
+    "Link": "https://docs.tabulareditor.com/te3/tutorials/data-security/data-security-about.html?tabs=nodatasecurity",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
+  },
+  {
+    "Question": "You are managing a data model with Tabular Editor. The 'Finance' users must have 'Build' permissions to the dataset, but only see data for their own region. The 'Sales' users must have 'Read' permissions to the dataset, but only see data for their own region. 'Sales' users must not see any data about Profit or Margin. Which of the below actions would be incorrect for you to fulfill this requirement properly?",
+    "PossibleAnswers": [
+      "Configure two roles 'RLS' and 'OLS', with the appropriate permissions, giving the 'Sales' users both roles.",
+      "Put the 'Finance' users in their own App Audience which has 'Build' permissions to the underlying App Dataset.",
+      "Configure two roles 'Finance' and 'Sales', where both have RLS configured, but the 'Sales' role has additional OLS permissions applied.",
+      "Give both 'Finance' users and 'Sales' users read permissions to the dataset via their respective App Audiences."
+    ],
+    "Context": "RLS and OLS cannot be combined across separate roles. They must be configured within the same role.",
+    "Answer": "Configure two roles 'RLS' and 'OLS', with the appropriate permissions, giving the 'Sales' users both roles.",
+    "Link": "https://docs.tabulareditor.com/te3/tutorials/data-security/data-security-about.html?tabs=nodatasecurity",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
+  },
+  {
+    "Question": "You are managing a data model with Tabular Editor. The 'Finance' users must have 'Build' permissions to the dataset, but only see data for their own region. The 'Sales' users must have 'Read' permissions to the dataset, but only see data for their own region. 'Sales' users must not see any data about Profit or Margin. Which of the below actions would be incorrect for you to fulfill this requirement properly?",
+    "PossibleAnswers": [
+      "Give the 'Finance' users the 'Contributor' role to the Workspace containing the dataset.",
+      "Give the 'Finance' users the 'Viewer' role to the Workspace containing the dataset, and 'Build' permissions to the specific dataset, itself.",
+      "Put the 'Finance' users in their own App Audience which has 'Build' permissions to the underlying App Dataset.",
+      "Put the 'Finance' users in their own App Audience which has both 'Build' and 'Reshare' permissions to the underlying App Dataset."
+    ],
+    "Context": "Any user with 'Contributor', 'Member', or 'Admin' Workspace Roles will bypass configured data security (RLS or OLS); they will be able to see all data, because they have 'Write' permissions to the workspace datasets.",
+    "Answer": "Give the 'Finance' users the 'Contributor' role to the Workspace containing the dataset.",
+    "Link": "https://docs.tabulareditor.com/te3/tutorials/data-security/data-security-about.html?tabs=nodatasecurity",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
+  },
+  {
+    "Question": "You are managing a data model with Tabular Editor. The 'Finance' users must have 'Build' permissions to the dataset, but only see data for their own region. The 'Sales' users must have 'Read' permissions to the dataset, but only see data for their own region. 'Sales' users must not see any data about Profit or Margin. Which of the below actions would be incorrect for you to fulfill this requirement properly?",
+    "PossibleAnswers": [
+      "Give the 'Sales' users the 'Member' role to the Workspace containing the dataset.",
+      "Give the 'Sales' users the 'Viewer' role to the Workspace containing the dataset.",
+      "Put the 'Sales' users in their own App Audience which has 'Read' permissions to the underlying App Dataset.",
+      "Give the 'Sales' users 'Read' permissions to the specific dataset, without giving them additional permissions via App Audiences or Workspace Roles."
+    ],
+    "Context": "Any user with 'Contributor', 'Member', or 'Admin' Workspace Roles will bypass configured data security (RLS or OLS); they will be able to see all data, because they have 'Write' permissions to the workspace datasets.",
+    "Answer": "Give the 'Sales' users the 'Member' role to the Workspace containing the dataset.",
+    "Link": "https://docs.tabulareditor.com/te3/tutorials/data-security/data-security-about.html?tabs=nodatasecurity",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
+  },
+  {
+    "Question": "You are managing a data model with Tabular Editor. The 'Finance' users must have 'Build' permissions to the dataset, but only see data for their own region. The 'Sales' users must have 'Read' permissions to the dataset, but only see data for their own region. 'Sales' users must not see any data about Profit or Margin. Which of the below actions would be incorrect for you to fulfill this requirement properly?",
+    "PossibleAnswers": [
+      "Write an RLS Table Permission filter expression 'Regions'[Email] = USERPRINCIPALNAME().",
+      "Write an RLS Table Permission filter expression 'Regions'[Email] = USERNAME().",
+      "Assign the security Roles to the respective user Azure AD Groups.",
+      "Assign App Audiences to the respective user Azure AD Groups."
+    ],
+    "Context": "The USERNAME() function will return only the user's User Name, not their User Principal Name (E-mail), used in Dynamic RLS configuration.",
+    "Answer": "Write an RLS Table Permission filter expression 'Regions'[Email] = USERNAME().",
+    "Link": "https://docs.tabulareditor.com/te3/tutorials/data-security/data-security-about.html?tabs=nodatasecurity",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
+  },
+  {
+    "Question": "You are managing a data model with Tabular Editor. The 'Finance' users must have 'Build' permissions to the dataset, but only see data for their own region. The 'Sales' users must have 'Read' permissions to the dataset, but only see data for their own region. 'Sales' users must not see any data about Profit or Margin. Which of the below actions would be incorrect for you to fulfill this requirement properly?",
+    "PossibleAnswers": [
+      "Assign users to their respective Roles from within Tabular Editor.",
+      "Assign users to their respective Roles from the Power BI Service.",
+      "Configure all roles to have model permissions set to 'Read'.",
+      "Provision dataset permissions via the users' respective App Audiences."
+    ],
+    "Context": "In Power BI, role assignment is done from within the Power BI Service, under dataset 'Security' settings.",
+    "Answer": "Assign users to their respective Roles from within Tabular Editor.",
+    "Link": "https://docs.tabulareditor.com/te3/tutorials/data-security/data-security-about.html?tabs=nodatasecurity",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
+  },
+  {
+    "Question": "You are managing a data model with Tabular Editor. The 'Finance' users must have 'Build' permissions to the dataset, but only see data for their own region. The 'Sales' users must have 'Read' permissions to the dataset, but only see data for their own region. 'Sales' users must not see any data about Profit or Margin. Which of the below actions would be incorrect for you to fulfill this requirement properly?",
+    "PossibleAnswers": [
+      "Validate the RLS filter expressions using a DAX Query.",
+      "Test the RLS and OLS in Power BI Service using 'Test as...' and creating ad-hoc, drag-and-drop visuals (DAX Queries).",
+      "Test the performance impact of RLS filter expressions from within DAX Studio.",
+      "Test the RLS and OLS in Tabular Editor using 'User Impersonation...' and creating ad-hoc, drag-and-drop pivot tables (Pivot Grid)."
+    ],
+    "Context": "In Power BI, it is not possible to test Data Security with ad-hoc queries. You can only test using the visuals in existing reports. In Tabular Editor, user impersonation enables testing with any DAX Query, Pivot Grid or Table Data Preview.",
+    "Answer": "Test the RLS and OLS in Power BI Service using 'Test as...' and creating ad-hoc, drag-and-drop visuals (DAX Queries).",
+    "Link": "https://docs.tabulareditor.com/te3/tutorials/data-security/data-security-testing.html",
+    "QuestionType": "Multiple Choice",
+    "Points": 5
+  },
+  {
+    "Question": "You are managing a data model with Tabular Editor. You need to test that the configured RLS is working as expected with User Impersonation. Of the below conditions, what do you not need to configure to ensure you can perform this testing?",
+    "PossibleAnswers": [
+      "Provision the user access to the dataset during testing.",
+      "Give the user 'Build' permissions on the dataset during testing.",
+      "Assign the user to their respective 'Role' via Power BI Service during testing.",
+      "Add the user to their respective 'App Audience'."
+    ],
+    "Context": "In Power BI, testing with User Impersonation requires that the user being impersonated has (1) Dataset Access (Read Permissions), (2) been assigned to their respective Role, (3) Dataset Build Permissions. They should not yet be added to 'App Audiences'.",
+    "Answer": "Add the user to their respective 'App Audience'.",
+    "Link": "https://docs.tabulareditor.com/te3/tutorials/data-security/data-security-testing.html",
     "QuestionType": "Multiple Choice",
     "Points": 5
   },
